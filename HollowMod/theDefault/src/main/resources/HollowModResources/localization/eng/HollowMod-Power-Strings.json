@@ -1,0 +1,54 @@
+{
+"HollowMod:CommonPower": {
+        "NAME": "Placeholder Power",
+        "DESCRIPTIONS": ["You applied #b", " keyword.", " keywords."]
+},
+"HollowMod:GrubsongPower": {
+        "NAME": "Grubsong",
+        "DESCRIPTIONS": ["The first #b,", "Times you take damage each turn, gain 1 #ySoul."]
+},
+"HollowMod:BaldurShellPower": {
+        "NAME": "Baldur Shell",
+        "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
+},
+"HollowMod:BrokenVesselPower": {
+        "NAME": "Broken Vessel",
+        "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
+},
+"HollowMod:SoulShamanPower": {
+        "NAME": "Soul Shaman",
+        "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
+},
+"HollowMod:UnnPower": {
+        "NAME": "Unn Shape",
+        "DESCRIPTIONS": ["When you activate #yFocus or gain #yVoid, Return a Random #yDash card from your discard to your hand."]
+},
+"HollowMod:FlukenestPower": {
+        "NAME": "Flukenest",
+        "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
+},
+"HollowMod:ShadesPower": {
+        "NAME": "Lord of Shades",
+        "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
+},
+"HollowMod:ElderbugPower": {
+        "NAME": "Elderbugs Wisdom",
+        "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
+},
+"HollowMod:WeaversongPower": {
+        "NAME": "Weaversong",
+        "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
+},
+"HollowMod:VoidPower": {
+        "NAME": "Void",
+        "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
+},
+"HollowMod:SoulPower": {
+        "NAME": "Soul",
+        "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
+},
+"HollowMod:RarePower": {
+        "NAME": "Placeholder Power2",
+        "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
+}
+}
