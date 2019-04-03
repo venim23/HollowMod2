@@ -51,6 +51,7 @@ public class FocusSoulAction
       this.source.getPower(SoulPower.POWER_ID).updateDescription();
       if (this.source.getPower(SoulPower.POWER_ID).amount == 0) {
         AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.source, this.source, SoulPower.POWER_ID));
+	//Use the action ReducePowerAction instead.
       }
     }
     this.isDone = true;
