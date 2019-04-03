@@ -84,17 +84,17 @@ public class TheDefault extends CustomPlayer {
     // =============== TEXTURES OF BIG ENERGY ORB ===============
 
     public static final String[] orbTextures = {
-            "HollowModResources/images/char/defaultCharacter/orb/layer1.png",
-            "HollowModResources/images/char/defaultCharacter/orb/layer2.png",
-            "HollowModResources/images/char/defaultCharacter/orb/layer3.png",
-            "HollowModResources/images/char/defaultCharacter/orb/layer4.png",
-            "HollowModResources/images/char/defaultCharacter/orb/layer5.png",
-            "HollowModResources/images/char/defaultCharacter/orb/layer6.png",
-            "HollowModResources/images/char/defaultCharacter/orb/layer1d.png",
-            "HollowModResources/images/char/defaultCharacter/orb/layer2d.png",
-            "HollowModResources/images/char/defaultCharacter/orb/layer3d.png",
-            "HollowModResources/images/char/defaultCharacter/orb/layer4d.png",
-            "HollowModResources/images/char/defaultCharacter/orb/layer5d.png",};
+            "HollowModResources/images/char/BugKnight/orb/layer1.png",
+            "HollowModResources/images/char/BugKnight/orb/layer2.png",
+            "HollowModResources/images/char/BugKnight/orb/layer3.png",
+            "HollowModResources/images/char/BugKnight/orb/layer4.png",
+            "HollowModResources/images/char/BugKnight/orb/layer5.png",
+            "HollowModResources/images/char/BugKnight/orb/layer6.png",
+            "HollowModResources/images/char/BugKnight/orb/layer1d.png",
+            "HollowModResources/images/char/BugKnight/orb/layer2d.png",
+            "HollowModResources/images/char/BugKnight/orb/layer3d.png",
+            "HollowModResources/images/char/BugKnight/orb/layer4d.png",
+            "HollowModResources/images/char/BugKnight/orb/layer5d.png",};
 
     // =============== /TEXTURES OF BIG ENERGY ORB/ ===============
 
@@ -102,9 +102,9 @@ public class TheDefault extends CustomPlayer {
 
     public TheDefault(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures,
-                "HollowModResources/images/char/defaultCharacter/orb/vfx.png", null,
+                "HollowModResources/images/char/BugKnight/orb/vfx.png", null,
                 new SpriterAnimation(
-                        "HollowModResources/images/char/defaultCharacter/Spriter/theDefaultAnimation.scml"));
+                        "HollowModResources/images/char/BugKnight/Spriter/theDefaultAnimation.scml"));
 
 
         // =============== TEXTURES, ENERGY, LOADOUT =================  
@@ -121,12 +121,12 @@ public class TheDefault extends CustomPlayer {
 
         // =============== ANIMATIONS =================  
 
-        loadAnimation(
-                THE_BUGKNIGHT_SKELETON_ATLAS,
-                THE_BUGKNIGHT_SKELETON_JSON,
-                1.0f);
-        AnimationState.TrackEntry e = state.setAnimation(0, "animation", true);
-        e.setTime(e.getEndTime() * MathUtils.random());
+        //loadAnimation(
+        //        THE_BUGKNIGHT_SKELETON_ATLAS,
+        //        THE_BUGKNIGHT_SKELETON_JSON,
+        //       1.0f);
+        //AnimationState.TrackEntry e = state.setAnimation(0, "animation", true);
+       // e.setTime(e.getEndTime() * MathUtils.random());
 
         // =============== /ANIMATIONS/ =================
 
@@ -157,25 +157,28 @@ public class TheDefault extends CustomPlayer {
 
         logger.info("Begin loading starter Deck Strings");
 
-        retVal.add(DefaultCommonAttack.ID);
-        retVal.add(skillQuickDash_s.ID);
         retVal.add(attackNailStrike_s.ID);
-        retVal.add(attackDashSlash.ID);
+        //retVal.add(attackNailStrike_s.ID);
+        //retVal.add(attackNailStrike_s.ID);
+        //retVal.add(attackNailStrike_s.ID);
+        logger.info("loading dashes");
+        retVal.add(skillQuickDash_s.ID);
+        //retVal.add(skillQuickDash_s.ID);
+        //retVal.add(skillQuickDash_s.ID);
+        //retVal.add(skillQuickDash_s.ID);
+        logger.info("loading focuses");
+        //retVal.add(skillFocusHeal_s.ID);
         retVal.add(skillFocusHeal_s.ID);
-        retVal.add(DefaultUncommonAttack.ID);
-        retVal.add(DefaultRareAttack.ID);
+        logger.info("loading testcards");
+        retVal.add(skillSoulTotem.ID);
+        retVal.add(attackVengefulVoid.ID);
+        retVal.add(powerSharpenedShadows.ID);
+        retVal.add(powerLordofShades.ID);
+        retVal.add(attackCoiledNail.ID);
+        retVal.add(attackDescendingDark.ID);
+        retVal.add(skillSoulSplash.ID);
 
-        retVal.add(DefaultCommonSkill.ID);
-        retVal.add(DefaultUncommonSkill.ID);
-        retVal.add(DefaultRareSkill.ID);
 
-        //retVal.add(DefaultCommonPower.ID);
-        retVal.add(DefaultUncommonPower.ID);
-        //retVal.add(DefaultRarePower.ID);
-
-        retVal.add(DefaultAttackWithVariable.ID);
-        retVal.add(DefaultSecondMagicNumberSkill.ID);
-        retVal.add(OrbSkill.ID);
         return retVal;
     }
 
@@ -184,14 +187,14 @@ public class TheDefault extends CustomPlayer {
         ArrayList<String> retVal = new ArrayList<>();
 
         retVal.add(PlaceholderRelic.ID);
-        retVal.add(PlaceholderRelic2.ID);
-        retVal.add(DefaultClickableRelic.ID);
-        //retVal.add(VesselMask.ID);
+        //retVal.add(PlaceholderRelic2.ID);
+        //retVal.add(DefaultClickableRelic.ID);
+        retVal.add(VesselMask.ID);
 
         UnlockTracker.markRelicAsSeen(PlaceholderRelic.ID);
-        UnlockTracker.markRelicAsSeen(PlaceholderRelic2.ID);
-        UnlockTracker.markRelicAsSeen(DefaultClickableRelic.ID);
-        //UnlockTracker.markRelicAsSeen(VesselMask.ID);
+        //UnlockTracker.markRelicAsSeen(PlaceholderRelic2.ID);
+        //UnlockTracker.markRelicAsSeen(DefaultClickableRelic.ID);
+        UnlockTracker.markRelicAsSeen(VesselMask.ID);
 
         return retVal;
     }

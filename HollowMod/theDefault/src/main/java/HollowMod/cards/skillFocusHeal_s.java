@@ -17,7 +17,7 @@ import HollowMod.characters.TheDefault;
 
 import static HollowMod.DefaultMod.makeCardPath;
 
-public class skillFocusHeal_s extends AbstractDefaultCard {
+public class skillFocusHeal_s extends HollowMod.cards.AbstractDefaultCard {
 
     /*
      * "Hey, I wanna make a bunch of cards now." - You, probably.
@@ -42,7 +42,7 @@ public class skillFocusHeal_s extends AbstractDefaultCard {
     public static final String ID = DefaultMod.makeID("FocusHealStart");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = makeCardPath("Focus.png");
+    public static final String IMG = makeCardPath("skillFocusHeal.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
 
     public static final String NAME = cardStrings.NAME;
@@ -54,7 +54,7 @@ public class skillFocusHeal_s extends AbstractDefaultCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.COMMON; //  Up to you, I like auto-complete on these
+    private static final CardRarity RARITY = CardRarity.BASIC; //  Up to you, I like auto-complete on these
     private static final CardTarget TARGET = CardTarget.SELF;  //   since they don't change much.
     private static final CardType TYPE = CardType.SKILL;       //
     public static final CardColor COLOR = TheDefault.Enums.HOLLOW_COLOR;

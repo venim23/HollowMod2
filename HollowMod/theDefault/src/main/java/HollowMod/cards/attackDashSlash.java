@@ -40,7 +40,7 @@ public class attackDashSlash extends AbstractDefaultCard {
     public static final String ID = DefaultMod.makeID("DashSlash"); // DefaultMod.makeID("attackDashSlash");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = makeCardPath("DashSlash.png");// "public static final String IMG = makeCardPath("attackDashSlash.png");
+    public static final String IMG = makeCardPath("attackDashSlash.png");// "public static final String IMG = makeCardPath("attackDashSlash.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
 
     public static final String NAME = cardStrings.NAME;
@@ -70,7 +70,6 @@ public class attackDashSlash extends AbstractDefaultCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
 
-        tags.add(CardTagEnum.NAIL);
         tags.add(CardTagEnum.DASH);
 
     }

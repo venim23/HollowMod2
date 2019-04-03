@@ -26,7 +26,7 @@ public class DefaultRarePower extends CustomCard {
 
     public static final String ID = DefaultMod.makeID("DefaultRarePower");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = makeCardPath("BaldurShell.png");
+    public static final String IMG = makeCardPath("powerBaldurShell.png");
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;

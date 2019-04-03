@@ -1,7 +1,7 @@
 {
   "modid": "hollowmod",
   "name": "Hollow Mod",
-  "author_list": ["Gremious", "Venim"],
+  "author_list": ["Venim","Gremious"],
   "description": "A mod that attempts to add the Knight from Hollow Knight as a Playable Character, All credit to Hollow Knight goes to Team Cherry.",
   "version": "${project.version}",
   "sts_version": "${SlayTheSpire.version}",

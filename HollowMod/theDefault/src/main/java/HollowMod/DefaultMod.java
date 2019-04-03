@@ -65,7 +65,7 @@ public class DefaultMod implements
     //This is for the in-game mod settings panel.
     private static final String MODNAME = "Hollow Mod";
     private static final String AUTHOR = "Venim"; // And pretty soon - You!
-    private static final String DESCRIPTION = "A mod that attempts to add the Knight from Hollow Knight as a Playable Character, All credit to Hollow Knight goes to Team Cherry.";
+    private static final String DESCRIPTION = "A mod that attempts to add the Knight from Hollow Knight as a Playable Character, All credit to Hollow Knight goes to Team Cherry. Created using the DefaultMod Template - credit to Gremious";
 
     // =============== INPUT TEXTURE LOCATION =================
 
@@ -305,9 +305,9 @@ public class DefaultMod implements
 
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
         BaseMod.addRelicToCustomPool(new PlaceholderRelic(), TheDefault.Enums.HOLLOW_COLOR);
-        BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheDefault.Enums.HOLLOW_COLOR);
-        BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheDefault.Enums.HOLLOW_COLOR);
-       // BaseMod.addRelicToCustomPool(new VesselMask(), TheDefault.Enums.HOLLOW_COLOR);
+        //BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheDefault.Enums.HOLLOW_COLOR);
+        //BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheDefault.Enums.HOLLOW_COLOR);
+        BaseMod.addRelicToCustomPool(new VesselMask(), TheDefault.Enums.HOLLOW_COLOR);
 
 
         // This adds a relic to the Shared pool. Every character can find this relic.
@@ -343,19 +343,26 @@ public class DefaultMod implements
         BaseMod.addCard(new attackNailStrike_s());
         BaseMod.addCard(new attackCycloneSlash());
         BaseMod.addCard(new skillFocusHeal_s());
+        BaseMod.addCard(new attackCoiledNail());
         BaseMod.addCard(new OrbSkill());
         BaseMod.addCard(new DefaultSecondMagicNumberSkill());
         BaseMod.addCard(new DefaultCommonAttack());
         BaseMod.addCard(new DefaultAttackWithVariable());
         BaseMod.addCard(new DefaultCommonSkill());
-        //BaseMod.addCard(new DefaultCommonPower());
+        BaseMod.addCard(new DefaultCommonPower());
         BaseMod.addCard(new DefaultUncommonSkill());
         BaseMod.addCard(new DefaultUncommonAttack());
         BaseMod.addCard(new DefaultUncommonPower());
         BaseMod.addCard(new DefaultRareAttack());
         BaseMod.addCard(new DefaultRareSkill());
-        //BaseMod.addCard(new DefaultRarePower());
-
+        BaseMod.addCard(new DefaultRarePower());
+        BaseMod.addCard(new attackInfectedAttack());
+        BaseMod.addCard(new skillSoulTotem());
+        BaseMod.addCard(new attackVengefulVoid());
+        BaseMod.addCard(new powerSharpenedShadows());
+        BaseMod.addCard(new powerLordofShades());
+        BaseMod.addCard(new attackDescendingDark());
+        BaseMod.addCard(new skillSoulSplash());
 
         logger.info("Making sure the cards are unlocked.");
         // Unlock the cards
@@ -371,13 +378,22 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(DefaultCommonAttack.ID);
         UnlockTracker.unlockCard(DefaultAttackWithVariable.ID);
         UnlockTracker.unlockCard(DefaultCommonSkill.ID);
-       //UnlockTracker.unlockCard(DefaultCommonPower.ID);
+        UnlockTracker.unlockCard(DefaultCommonPower.ID);
         UnlockTracker.unlockCard(DefaultUncommonSkill.ID);
         UnlockTracker.unlockCard(DefaultUncommonAttack.ID);
         UnlockTracker.unlockCard(DefaultUncommonPower.ID);
         UnlockTracker.unlockCard(DefaultRareAttack.ID);
         UnlockTracker.unlockCard(DefaultRareSkill.ID);
-        //UnlockTracker.unlockCard(DefaultRarePower.ID);
+        UnlockTracker.unlockCard(DefaultRarePower.ID);
+        UnlockTracker.unlockCard(attackInfectedAttack.ID);
+        UnlockTracker.unlockCard(skillSoulTotem.ID);
+        UnlockTracker.unlockCard(attackVengefulVoid.ID);
+        UnlockTracker.unlockCard(powerSharpenedShadows.ID);
+        UnlockTracker.unlockCard(powerLordofShades.ID);
+        UnlockTracker.unlockCard(attackCoiledNail.ID);
+        UnlockTracker.unlockCard(attackDescendingDark.ID);
+        UnlockTracker.unlockCard(skillSoulSplash.ID);
+
 
 
 

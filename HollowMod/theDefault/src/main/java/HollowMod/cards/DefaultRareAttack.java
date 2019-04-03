@@ -29,7 +29,7 @@ public class DefaultRareAttack extends CustomCard {
 
     public static final String ID = DefaultMod.makeID("DefaultRareAttack");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = makeCardPath("DescendingDark.png");
+    public static final String IMG = makeCardPath("attackDescendingDark.png");
 
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;

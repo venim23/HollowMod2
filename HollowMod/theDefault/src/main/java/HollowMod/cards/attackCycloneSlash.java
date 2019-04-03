@@ -2,7 +2,10 @@ package HollowMod.cards;
 
 import HollowMod.patches.CardTagEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -11,6 +14,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import HollowMod.DefaultMod;
 import HollowMod.characters.TheDefault;
+import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 
 import static HollowMod.DefaultMod.makeCardPath;
 
@@ -40,7 +44,7 @@ public class attackCycloneSlash extends AbstractDefaultCard {
     public static final String ID = DefaultMod.makeID("CycloneSlash"); // DefaultMod.makeID("attackCycloneSlash");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = makeCardPath("CycloneSlash.png");// "public static final String IMG = makeCardPath("attackCycloneSlash.png");
+    public static final String IMG = makeCardPath("attackCycloneSlash.png");// "public static final String IMG = makeCardPath("attackCycloneSlash.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
 
     public static final String NAME = cardStrings.NAME;
@@ -66,17 +70,19 @@ public class attackCycloneSlash extends AbstractDefaultCard {
 
     public attackCycloneSlash() { // public attackCycloneSlash() - This one and the one right under the imports are the most important ones, don't forget them
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        baseDamage = DAMAGE;
+        this.baseDamage = DAMAGE;
+        this.isMultiDamage = true;
 
-        tags.add(CardTagEnum.NAIL);
     }
 
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new CleaveEffect(), 0.1F));
         AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+                new DamageAllEnemiesAction(m, multiDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
     }
 
 

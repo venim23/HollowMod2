@@ -73,7 +73,7 @@ public class CommonPower extends AbstractPower implements CloneablePowerInterfac
             // "AbstractDungeon.player.masterDeck.getAttacks().group" - every attack in your actual master deck.
             // Read up on java's enhanced for-each loops if you want to know more on how these work.
 
-            ++count; // At the end of your turn, increase the count by 1 for each card played this turn.
+            ++count; // At tche end of your turn, inrease the count by 1 for each card played this turn.
         }
 
         if (count > 0) {
